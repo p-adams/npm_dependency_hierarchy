@@ -4,4 +4,4 @@
 import npm_dependency_hierarchypkg/submodule
 
 when isMainModule:
-  echo(getWelcomeMessage())
+  echo(getNpmDependencies())

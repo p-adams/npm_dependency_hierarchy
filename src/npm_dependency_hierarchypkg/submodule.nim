@@ -1,6 +1,14 @@
-# This is just an example to get you started. Users of your hybrid library will
-# import this file by writing ``import npm_dependency_hierarchypkg/submodule``. Feel free to rename or
-# remove this file altogether. You may create additional modules alongside
-# this file as required.
 
-proc getWelcomeMessage*(): string = "Hello, World!"
+
+type
+    Dependency = object
+        package_name: string
+        version_range: string
+
+
+proc getNpmDependencies*(): int =
+    let dependencies: seq[Dependency] = @[]
+    let dep = Dependency(package_name: "svelte", version_range: "^3.34.0")
+    
+    result = 1
+
